@@ -72,7 +72,11 @@ test_data_accuracy=accuracy_score(X_test_prediction,Y_test)
 print('Accuarcy score of the test data :',test_data_accuracy)
 
 #making a predictive system
-input_data=(1,85,66,29,0,26.6,0.351,31)
+#input_data=(1,85,66,29,0,26.6,0.351,31)
+input_data=pd.DataFrame({'Pregnancies':[int(input('Enter your Pregnancies count'))],'Glucose':[int(input('Enter your glucose level'))],
+                   'BloodPressure':[int(input('Enter bp level'))],'SkinThickness':[int(input('Enter skin thickness'))],
+                   'Insulin':[int(input('Enter Insulin level'))],'BMI':[float(input('Enter bmi'))],'DiabetesPedigreeFunction':[float(input('Enter DiabetesPedigreeFunction'))],'Age':[int(input('Enter Age'))]})
+
 
 #changing the input data to a numpy array
 input_data_as_numpy_array=np.asarray(input_data)
